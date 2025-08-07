@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\curl-8.7.1\include;C:\Users\doyoe\TEMP\spdlog\include;C:\Users\doyoe\TEMP\optional\include;C:\Users\doyoe\lib\depthai-core-v2.29.0-win64\depthai-core-v2.29.0-win64\lib\cmake\depthai\dependencies\include;C:\Users\doyoe\lib\depthai-core-v2.29.0-win64\depthai-core-v2.29.0-win64\include;C:\Users\doyoe\TEMP\fmt\include\fmt;C:\Users\doyoe\TEMP\fmt\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\doyoe\lib\depthai-core-v2.29.0-win64\depthai-core-v2.29.0-win64\lib\cmake\depthai\dependencies\include;C:\Users\doyoe\lib\depthai-core-v2.29.0-win64\depthai-core-v2.29.0-win64\include;C:\Users\doyoe\TEMP\fmt\include\fmt;C:\Users\doyoe\TEMP\fmt\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\doyoe\TEMP\apriltag\lib;C:\Users\doyoe\TEMP\zmq\lib;C:\Users\doyoe\lib\depthai-core-v2.29.0-win64\depthai-core-v2.29.0-win64\lib;C:\Users\doyoe\lib\opencv\4.11.0\build\x64\vc16\lib;C:\curl-8.7.1\build\Win64\VC14.30\LIB Debug - LIB OpenSSL;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -135,8 +135,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="apriltag_pose_estimation.cpp" />
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="apriltag_pose_estimation.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="backup_angle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="calibration.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test_boot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
