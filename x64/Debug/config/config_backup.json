@@ -1,0 +1,25 @@
+{
+  "marker_csv_path": "marker/visionData (6).csv",
+  "backend": {
+    "init_url": "https://dev-lms-api.watalbs.com/monitoring/geofence/addition-info/logistics/heavy-equipment/init?projectId=afbb58611535449780cdb27a615afeb2&mappingId=b7c41f86e38f44a1847a4d1af3b1acb1&mapId=5544cb62bf6b4f9b9504fe1aacffa3fc",
+    "pose_url": "https://dev-lms-api.watalbs.com/monitoring/plane/plane-poc/heavy-equipment/location"
+  },
+  "map": {
+    "size": 900,
+    "scale": 18.0,
+    "origin_x": 450,
+    "origin_y": 450,
+    "arrow_length": 20.0
+  },
+  "camera": {
+    "front_mxid": "19443010C180962E00",
+    "rear_mxid": "19443010C142962E00"
+  },
+  "smoothing": {
+    "alpha": 0.15,
+    "translation_threshold": 1.0
+  },
+  "logging": {
+    "level": "info"
+  }
+}
